@@ -2,7 +2,7 @@
 
 ## 🙋‍♂️ 참가인원 🙋‍♀️
 
-- 이학주 (Swift, C++)
+- [chulchul](https://github.com/Wonchul-Shin)
 - 이준규 (C++)
 - 이지은 (Java, Python)
 - 김희철 (Javascript, Python)
