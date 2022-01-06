@@ -1,7 +1,6 @@
 # [듣보잡] https://www.acmicpc.net/problem/1764
 
 ## 문제
-문제 내용
 
 
 ## 입력
