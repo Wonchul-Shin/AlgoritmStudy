@@ -15,16 +15,16 @@
 
 
 ## 예제입력1
-3 4
-ohhenrie
-charlie
-baesangwook
-obama
-baesangwook
-ohhenrie
-clinton
+3 4  
+ohhenrie  
+charlie  
+baesangwook  
+obama  
+baesangwook  
+ohhenrie  
+clinton  
 
 ## 예제출력1
-2
-baesangwook
-ohhenrie
+2  
+baesangwook  
+ohhenrie  
