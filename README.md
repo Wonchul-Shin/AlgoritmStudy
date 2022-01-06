@@ -1,9 +1,9 @@
 # 알고리즘 스터디
 
 ## 🙋‍♂️ 참가인원 🙋‍♀️
-- 용제
-- 이은성
-- hyeon
+- [용제](https://github.com/YongJ7)
+- [이은성](https://github.com/Ganbilly)
+- [hyeon](https://github.com/ahyc01)
 - [chulchul](https://github.com/Wonchul-Shin)
 
 ## 목표💡
