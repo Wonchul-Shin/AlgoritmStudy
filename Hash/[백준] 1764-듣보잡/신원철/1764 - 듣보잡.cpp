@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_map>
+#include<list>
 
 using namespace std;
 int main()
@@ -8,22 +9,28 @@ int main()
     cin >> n >> m;
     int answer = 0;
     
-    unordered_map<string, int> hash;
+    unordered_map<string, int> dutdou;
+    list<string> dutbow;
+    list<string>::iterator iter = dutbow.begin();
+    
     string word;
     for(int i = 0; i < n; i++){
         
         cin >> word;
-        hash[word] = 1;
+        dutdou[word] = 1;
     }
-    for (int i = 0; i < m; i++){
+    for (int i = n; i < n + m; i++){
         cin >> word;
-        if (hash[word] == 1){
-            answer ++;
+        if (dutdou[word] == 1){
+            dutbow.push_back(word);
         }
     }
-    
-    
-    cout<<answer;
+
+    dutbow.sort();
+    cout<< dutbow.size() << endl;
+    for (iter =dutbow.begin(); iter != dutbow.end(); iter++){
+        cout<<*iter << endl;
+    }
 
     return 0;
 }
