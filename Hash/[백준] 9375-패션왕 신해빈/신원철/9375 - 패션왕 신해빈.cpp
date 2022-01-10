@@ -12,7 +12,7 @@ int main()
     string word1, word2;
     int answer = 1;
     cin >> n;
-    list<string> chain = {};    
+    list<string> chain = {};    // 몇가지 항목이 있는지 담을 리스트
     list<string>::iterator iter = chain.begin();
         
     for (i = 0; i < n; i++){
@@ -23,12 +23,12 @@ int main()
         for (j = 0; j < num; j++){
             cin >> word1 >> word2;
 
-            if (hash.find(word2) == hash.end()){
-                hash[word2] = 1;
-                chain.push_back(word2);
+            if (hash.find(word2) == hash.end()){ // 해당 항목이 존재하지 않으면
+                hash[word2] = 1; // 키값을 1로 설정
+                chain.push_back(word2); // 리스트에도 추가 
             }
             
-            else{
+            else{ // 항목이 존재하면 key값을 +1
                 hash[word2] ++;
 
             }
@@ -38,7 +38,7 @@ int main()
             answer *= (hash[*iter] + 1);
         }
 
-        if (num == 0){
+        if (num == 0){ 
             cout << 0 << endl;
         }
         else{
