@@ -13,10 +13,12 @@ int main()
 	while (testcase--) {
 		cin >> n;
 		string cloth, kind;
+		// 옷과 종류 입력받고 종류별로 몇개의 옷이 있는지 확인
 		for (int i = 0; i < n; i++) {
 			cin >> cloth >> kind;
 			arr[kind]++;
 		}
+		// 나올 수 있는 조합 계산
 		for (auto it = arr.begin(); it != arr.end(); it++) {
 			ans = ans * (it->second + 1);
 		}
