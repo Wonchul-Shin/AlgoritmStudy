@@ -36,7 +36,7 @@ int main() {
 		for (int k = 1; k < n - 1; k++) {
 			if (out_car[k] > out_car[k + 1]) {  //일단 큰수가 앞에있으면 카운터 세고
 				count++;
-				for (j = 1; j < n; j++) {  //한번 정렬
+				for (j = 1; j < n; j++) {  //큰수를 뒤로 옮겨서 한번 정렬
 					if (out_car[j] > out_car[j + 1]) {
 						temp = out_car[j];
 						out_car[j] = out_car[j + 1];
