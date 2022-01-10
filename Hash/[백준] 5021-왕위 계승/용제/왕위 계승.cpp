@@ -12,17 +12,20 @@ int main()
 {
 	cin.tie(0);
 	cin.sync_with_stdio(0);
-
+	
+	// 초대 왕 입력
 	cin >> N >> M >> king;
 	arr[king] = 1.0;
-
+	
+	// 전체를 확인
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			if(i == 0) cin >> fam_tree[j][0] >> fam_tree[j][1] >> fam_tree[j][2];
 			arr[fam_tree[j][0]] = (arr[fam_tree[j][2]] + arr[fam_tree[j][1]]) / 2;
 		}
 	}
-
+	
+	// 후대 왕 출력
 	for (int i = 0; i < M; i++)
 	{
 		cin >> s;
