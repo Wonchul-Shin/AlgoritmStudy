@@ -7,8 +7,8 @@ int main(){
 
     int n1, n2, result;
     string name, group;
-    unordered_map<string, int> *m;
-
+    unordered_map<string, int> *m;                                  // map의 개수를 n1으로 받아 테스트케이스마다 맵을 만듦
+                                                                    // map에는 <group명 , 갯수> 로 저장 파워셋 - 1 로 경우의 수 계산
     cin >> n1;
     m = new unordered_map<string, int>[n1];
 
