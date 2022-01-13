@@ -2,6 +2,8 @@
 #include <unordered_map>
 #include <iostream>
 #include <string>
+#include <vector>
+#include<algorithm>
 
 using namespace std;
 
@@ -14,6 +16,7 @@ int main() {
 
 	unordered_map<string, bool> hash_i;
 	unordered_map<int, string> hash_o;
+	vector<string> see;
 
 	for (int i = 0; i < n; i++) {
 
@@ -24,15 +27,18 @@ int main() {
 
 		cin >> s;
 		if (hash_i[s]){
+			see.insert(see.begin()+count, s);
 			count++;	
-			hash_o[count] = s;
 		}
 	}
 
-	cout << count << endl;
-	for (int k = 1; k <= count; k++) {
+	string tmp;
+	sort(see.begin(), see.end());
 
-		cout << hash_o[k] << endl;
+
+	cout << count << endl;
+	for (int k = 0; k < count; k++) {
+		cout << see[k] << endl;
 	}
 
 	return 0;
