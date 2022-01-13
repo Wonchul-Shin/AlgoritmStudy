@@ -31,5 +31,5 @@
 
 ## 목차 🔎
 
-- 1회차: [해시](./해시)
-  
+- 1회차: [해시](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Hash)
+- 2회차: [스택 & 큐](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Stack)
