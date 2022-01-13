@@ -1,4 +1,4 @@
-# [철도 공사] https://www.acmicpc.net/problem/3111
+# [검열] https://www.acmicpc.net/problem/3111
 
 ## 문제
 김상근은 창영마을에서의 권력을 유지하기 위해 신문을 검열하려고 한다.
