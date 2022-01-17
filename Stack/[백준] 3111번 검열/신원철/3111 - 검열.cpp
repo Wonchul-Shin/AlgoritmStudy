@@ -38,7 +38,7 @@ bool search_right(list<char> *link, list<char>::iterator iter) { // 역순환
 	}
 	return true;
 }
-int main(void) {
+int main() {
 	cin >> a;
 	cin >> t;
 	len_a = strlen(a);
