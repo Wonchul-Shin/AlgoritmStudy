@@ -39,11 +39,8 @@ int main() {
                     answer++;
                     temp = vec[j]; // 볼 수 있었다는건 curr과 vec[j]에 두 값보다 큰 값이 없었다는 뜻 
                 }
-
-                
             }
         }
     }
-    
     cout << answer;
 }
