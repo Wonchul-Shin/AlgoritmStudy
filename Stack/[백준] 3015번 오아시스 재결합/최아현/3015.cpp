@@ -9,7 +9,7 @@ using namespace std;
 
 int n;
 long long result;
-stack<pair<long long, long long>> s; //Å°, Áßº¹µÈ °³¼ö
+stack<pair<long long, long long>> s; //Ã…Â°, ÃÃŸÂºÂ¹ÂµÃˆ Â°Â³Â¼Ã¶
 
 int main() {
 
