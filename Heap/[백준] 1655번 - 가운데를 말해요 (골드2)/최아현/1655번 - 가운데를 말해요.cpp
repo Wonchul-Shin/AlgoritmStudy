@@ -54,7 +54,7 @@ int main() {
 
 using namespace std;
 
-priority_queue<int> r_heap;
+priority_queue<int,vector<int>,greater<int>> r_heap;
 priority_queue<int> l_heap;
 
 void right(int num) {
