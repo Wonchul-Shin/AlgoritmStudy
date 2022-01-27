@@ -18,7 +18,7 @@ int main() {
 	for (int i=1; i<= n; i++) {
 		cin >> num;
 		
-		if ( i% 2 == 0 ) { // ÀÔ·Â¹ŞÀº Á¤¼öµéÀÌ Â¦¼öÀÏ ¶§
+		if ( i% 2 == 0 ) { // ì…ë ¥ë°›ì€ ì •ìˆ˜ë“¤ì´ ì§ìˆ˜ì¼ ë•Œ
 			pq1.push(num);
 			half = i / 2;
 			
@@ -30,7 +30,7 @@ int main() {
 				pq1.pop();
 			}
 		}
-		else { // ÀÔ·Â¹ŞÀº Á¤¼öµéÀÌ È¦¼öÀÏ ¶§
+		else { // ì…ë ¥ë°›ì€ ì •ìˆ˜ë“¤ì´ í™€ìˆ˜ì¼ ë•Œ
 			
 			pq2.push(num);
 			half = (i / 2) + 1;
@@ -75,28 +75,28 @@ int main() {
 	for (int i=1; i <= N; i++) {
 		cin >> num;
 
-		if (r_heap.size() == 0) {  // ¿À¸¥ÂÊ ºó Å¥ ÀÏ ¶§
+		if (r_heap.size() == 0) {  // ì˜¤ë¥¸ìª½ ë¹ˆ í ì¼ ë•Œ
 			r_heap.push(num);      
 		}
-		else if (l_heap.size() == 0) { //¿ŞÂÊ ºó Å¥ ÀÏ ¶§
-			if (r_heap.top() < num) {  //¿À¸¥ÂÊ Å¥ÀÇ Å¾º¸´Ù numÀÌ Å¬ ¶§
+		else if (l_heap.size() == 0) { //ì™¼ìª½ ë¹ˆ í ì¼ ë•Œ
+			if (r_heap.top() < num) {  //ì˜¤ë¥¸ìª½ íì˜ íƒ‘ë³´ë‹¤ numì´ í´ ë•Œ
 				left(num);
 			}
 			else l_heap.push(num);
 		}
-		else if (l_heap.size() > r_heap.size()) { // ¿ŞÂÊ Å¥ Å©±â°¡ ´õ Å¬ ¶§
-			if (l_heap.top() <= num) {             //¿ŞÂÊ Å¥ Å¾°ú ºñ±³ÇÏ¿© Å¾ÀÌ ´õ Å¬ ¶§
+		else if (l_heap.size() > r_heap.size()) { // ì™¼ìª½ í í¬ê¸°ê°€ ë” í´ ë•Œ
+			if (l_heap.top() <= num) {             //ì™¼ìª½ í íƒ‘ê³¼ ë¹„êµí•˜ì—¬ íƒ‘ì´ ë” í´ ë•Œ
 				r_heap.push(num); 
 			}
 			else right(num);
 		}
-		else if (l_heap.size() < r_heap.size()) {  // ¿À¸¥ÂÊ Å¥ Å©±â°¡ ´õ Å¬ ¶§
-			if (l_heap.top() > num) {  //¿ŞÂÊ Å¥ Å¾ º¸´Ù ÀÛÀ» ¶§ 
+		else if (l_heap.size() < r_heap.size()) {  // ì˜¤ë¥¸ìª½ í í¬ê¸°ê°€ ë” í´ ë•Œ
+			if (l_heap.top() > num) {  //ì™¼ìª½ í íƒ‘ ë³´ë‹¤ ì‘ì„ ë•Œ 
 				right(num);
 			}
 			else  l_heap.push(num);
 		}
-		else { // µÑÀÇ »çÀÌÁî°¡ °°À» ¶§
+		else { // ë‘˜ì˜ ì‚¬ì´ì¦ˆê°€ ê°™ì„ ë•Œ
 			if (l_heap.top() < num) {
 				r_heap.push(num);
 			}
