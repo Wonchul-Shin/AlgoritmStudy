@@ -1,4 +1,4 @@
-# [버블 소트] <https://www.acmicpc.net/problem/2751>
+# [버블 소트] <https://www.acmicpc.net/problem/1377>
 
 
 ## 문제
