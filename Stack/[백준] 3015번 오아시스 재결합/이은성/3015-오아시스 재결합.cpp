@@ -1,40 +1,50 @@
 #include <iostream>
+#include <stack>
 #include <vector>
 
 using namespace std;
-int returnMin(int a, int b){
-    return a < b? a : b;
-}
-int main(){
+
+int main() {
 
     int n;
-    int input;
-    long long count = 0;                  // 순서쌍의 수
-    int max;                        // i와 j 사이의 최대값
-    int min;                        // i와 j 중에 작은값
-    vector<int> v;                  // 사람들이 서 있는 순서대로 input한 벡터
+    long long count = 0;
+    long long input;
+    stack<pair<long long, int>> s;                        //stack[몇번째 사람] = { 키, 인원};             
+    vector<pair<long long, int>> v;
+
+    ios::sync_with_stdio(false);
+    cout.tie(NULL);
+    cin.tie(NULL);
 
     cin >> n;
 
-    for(int i = 0; i < n; i ++){                    //n개 값 입력
+    for(int i = 0; i < n; i++){
         cin >> input;
-        v.push_back(input);
+        v.push_back({input, 1});
     }
+   
 
-    for(int i = 0; i < n; i ++){
-        max = 0; 
-
-        for(int j = i + 1; j < n; j++){             //i 와 j사이의 최대의 값을 max에 저장해서 새로운 i와 j중의 작은 값이
-            min = returnMin(v[i], v[j]);            //max보다 작으면 continue 아닐 시 max를 v[j]로 바꾼 뒤 카운트 1 증가
-
-            if(max > min)
-                continue;
-            
-            max = v[j];
+    for(int i = 0; i < n; i++){
+        if(s.empty()){
+            s.push(v[i]);
+        }
+        else if(v[i].first < s.top().first){
+            s.push(v[i]);
             count++;
         }
+        else if(v[i].first == s.top().first){
+            v[i].second += s.top().second;
+            count += s.top().second;
+            s.pop();
+            i--;
+        }
+        else{
+            count += s.top().second;
+            s.pop();
+            i--;
+        }
     }
-    
+
     cout << count;
     return 0;
 }
