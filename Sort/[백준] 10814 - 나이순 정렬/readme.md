@@ -1,4 +1,4 @@
-# [수 정렬하기2] <https://www.acmicpc.net/problem/2751>
+# [나이순 정렬] <https://www.acmicpc.net/problem/10814>
 
 
 ## 문제
