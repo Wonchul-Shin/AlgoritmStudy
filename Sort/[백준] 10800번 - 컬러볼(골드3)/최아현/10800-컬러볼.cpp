@@ -6,7 +6,7 @@
 
 using namespace std;
 
-struct ball { // °ø Á¤º¸
+struct ball { // ê³µ ì •ë³´
 	int color;
 	int size;
 	int num;
@@ -25,7 +25,7 @@ int main() {
 	int N, total = 0;
 	cin >> N;
 	vector<ball> b(N);
-	vector<pair<int, int>> v;   // <Ãâ·Â °ª, °°Àº °ø¹øÈ£ ´©ÀûÇÕ>
+	vector<pair<int, int>> v;   // <ì¶œë ¥ ê°’, ê°™ì€ ê³µë²ˆí˜¸ ëˆ„ì í•©>
 
 	for (int i = 0; i < N; i++) {
 		cin >> b[i].color >> b[i].size;
@@ -33,41 +33,32 @@ int main() {
 		v.push_back(pair<int, int>(0, 0));
 	}
 	
-	sort(b.begin(), b.end(), cmp); // Á¤·Ä
+	sort(b.begin(), b.end(), cmp); // ì •ë ¬
 
 	int ssiz = 0;
 	int scol = 0;
 	int ctot = 0;
 
-	//printf("total %d - %d¹ø »ö ´©ÀûÇÕ %d = ÃÑ ÇÕ %d \n",
-					//	total, b[j].num, v[b[j].color - 1].second, v[b[j].num].first);
-
 	for (int j = 0; j < N ; j++) {
 
-		if (ssiz == b[j].size) { //Å©±â°¡ °°À» ¶§
-			if (scol == b[j].color) { // »öµµ °°À» ¶§
+		if (ssiz == b[j].size) { //í¬ê¸°ê°€ ê°™ì„ ë•Œ
+			if (scol == b[j].color) { // ìƒ‰ë„ ê°™ì„ ë•Œ
 				v[b[j].num].first = total - v[b[j].color - 1].second;
-				//printf("total %d - %d¹ø Å©±â %d »ö%d ´©ÀûÇÕ %d = ÃÑ ÇÕ %d \n",
-				//	total, b[j].num, b[j].size, b[j].color, v[b[j].color - 1].second, v[b[j].num].first);
 				ctot += b[j].size;
 			}
 
-			else{ // »ö ´Ù¸¦ ¶§
+			else{ // ìƒ‰ ë‹¤ë¥¼ ë•Œ
 				v[b[j].num].first = total - v[b[j].color - 1].second - ctot;
-				//printf("total %d - %d¹ø Å©±â %d »ö %d ´©ÀûÇÕ %d - ctot %d = ÃÑ ÇÕ %d \n",
-				//	total, b[j].num, b[j].size, b[j].color, v[b[j].color - 1].second, ctot, v[b[j].num].first);
 				ctot += b[j].size;
 			}
 
-			total += b[j].size;
-			v[b[j].color - 1].second += b[j].size;
+			total += b[j].size;// ì´ ëˆ„ì í•©
+			v[b[j].color - 1].second += b[j].size;// ê°™ì€ ìƒ‰ì˜ ëˆ„ì í•©
 		}
 		else{ 
-			v[b[j].num].first = total - v[b[j].color-1].second; // n¹ø °øÀÇ ÃÑ ÇÕ
-			//printf("total %d - %d¹ø Å©±â %d »ö %d ´©ÀûÇÕ %d = ÃÑ ÇÕ %d \n",
-			//			total, b[j].num, b[j].size, b[j].color, v[b[j].color - 1].second, v[b[j].num].first);
-			total += b[j].size;  // ÃÑ ´©ÀûÇÕ
-			v[b[j].color-1].second += b[j].size; // »öÀÇ ´©ÀûÇÕ
+			v[b[j].num].first = total - v[b[j].color-1].second; // në²ˆ ê³µì˜ ì´ í•©
+			total += b[j].size;  
+			v[b[j].color-1].second += b[j].size; 
 
 			ssiz = b[j].size;
 			scol = b[j].color;
@@ -76,10 +67,7 @@ int main() {
 	}
 
 	for (int k = 0; k < N; k++) {
-
 		cout << v[k].first << '\n';
-
 	}
-
 	return 0;
 }
