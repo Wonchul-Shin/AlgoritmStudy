@@ -9,7 +9,7 @@
 
 예를 들어, 아래와 같은 지도를 갖는 도시를 살펴보자.
 
-![image](https://user-images.githubusercontent.com/85343553/152309628-ff9652fd-4dac-44e6-8269-2e267994a39a.png)
+![image](https://user-images.githubusercontent.com/85343553/152309692-2207c909-9f91-4feb-a1bc-eb3b61c5a40b.png)
 
 0은 빈 칸, 1은 집, 2는 치킨집이다.
 
