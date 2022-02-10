@@ -24,7 +24,7 @@ int main(){
 
     int v = 0;
 
-    while(n--){
+    for(int i = 0; i < n; i++){
         int s, t;
         cin >> s >> t;
         lecture.push_back(make_pair(s, t));
