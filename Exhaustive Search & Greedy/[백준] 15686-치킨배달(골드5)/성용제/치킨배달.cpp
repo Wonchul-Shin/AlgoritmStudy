@@ -26,7 +26,7 @@ int main()
     // M개의 치킨집만 선택하기 위한 비트배열
     vector<int> bit(CH.size()); 
     fill(bit.begin(),bit.end(),0);
-    for(int i=0;i<M;i++) bit[i]=1;
+    for(int i=0;i<M;i++) bit[i]=1;  // M개의 치킨집만 남기기 때문에 M개 비트만 사용
 
     // N개 중 M개만 선택 
     do{
