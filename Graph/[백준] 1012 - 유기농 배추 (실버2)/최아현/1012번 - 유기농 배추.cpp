@@ -1,4 +1,4 @@
-/*#include<cstdio>
+#include<cstdio>
 #include<iostream>
 #include<string.h>
 
@@ -9,7 +9,7 @@ int M, N;
 int cabge[50][50] = { 0, };
 int check[50][50] = { 0, };
 
-int dx[4] = { 1,-1,0,0 }; //µ¿¼­³²ºÏ
+int dx[4] = { 1,-1,0,0 }; 
 int dy[4] = { 0,0,-1,1 }; 
 
 void dfs(int y, int x) {
@@ -60,4 +60,4 @@ int main() {
 
 	}
 	return 0;
-}*/
+}
