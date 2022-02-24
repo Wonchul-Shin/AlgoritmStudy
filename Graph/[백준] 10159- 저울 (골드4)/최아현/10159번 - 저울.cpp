@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -34,8 +34,8 @@ int main() {
 
 	for (int i = 0; i < M; i++) {
 		cin >> x >> y;
-		big[y].push_back(x); // ÀÚ½Åº¸´Ù Å« °Í
-		sml[x].push_back(y); // ÀÚ½Åº¸´Ù ÀÛÀº°Í
+		big[y].push_back(x); // ìì‹ ë³´ë‹¤ í° ê²ƒ
+		sml[x].push_back(y); // ìì‹ ë³´ë‹¤ ì‘ì€ê²ƒ
 	}
 
 	for (int k = 1; k <= N; k++) {
@@ -49,4 +49,4 @@ int main() {
 		cnt.clear();
 	}
 	return 0;
-}*/
+}
