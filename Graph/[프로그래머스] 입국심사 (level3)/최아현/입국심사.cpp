@@ -1,4 +1,4 @@
-/*#include<cstdio>
+#include<cstdio>
 #include<iostream>
 #include <string>
 #include <vector>
@@ -11,9 +11,9 @@ long long solution(int n, vector<int> times) {
 	long long answer = 0;
 	long long mint = 1, maxt, avgt, person = 0;
 
-	sort(times.begin(), times.end()); // ½É»ç´ë ½Ã°£ Á¤·Ä
+	sort(times.begin(), times.end()); // ì‹¬ì‚¬ëŒ€ ì‹œê°„ ì •ë ¬
 
-	maxt = *max_element(times.begin(), times.end()) * (long long)n;  // ½É»ç´ë ÃÖ´ë ½Ã°£ * ÀÎ¿ø
+	maxt = *max_element(times.begin(), times.end()) * (long long)n;  // ì‹¬ì‚¬ëŒ€ ìµœëŒ€ ì‹œê°„ * ì¸ì›
 
 	while (mint <= maxt) {
 
@@ -21,23 +21,20 @@ long long solution(int n, vector<int> times) {
 
 		long long cnt = 0;
 		for (int i = 0; i < times.size(); i++) {
-			// °¢ ½Ã°£º° Æò±Õ ½Ã°£±îÁö Ã³¸®ÇÒ ¼ö ÀÖ´Â ÃÖ´ëÀÎ¿ø.
+			// ê° ì‹œê°„ë³„ í‰ê·  ì‹œê°„ ìµœëŒ€ì¸ì›
 			cnt += avgt / times[i];
 		}
-		if (cnt < n) { // ½É»ç´ëº¸´Ù ÃÖ´ëÀÎ¿øÀÌ ÀûÀ» ¶§
-					   // ÃÖ¼Ò°ªÀ» Æò±Õ + 1 ·Î Á¼ÇôÁØ´Ù.
+		if (cnt < n) { // ì‹¬ì‚¬ëŒ€ > ìµœëŒ€ì¸ì›
+					  
 			mint = avgt + 1;
 		}
 		else {
-			// avgt(Æò±Õ ½Ã°£)ÀÌ maxt(ÃÖ´ë ½Ã°£) ÀÌÇÏ¸é
-			// avgt ´Â ÃÖ¼Ò°ªÀÌ µÉ ¼öµµ ÀÖ±â ¶§¹®¿¡ answer¿¡ ³Ö¾îÁÖ°í
 			if (avgt <= maxt) {
 				answer = avgt;
 			}
-			// ÃÖ¼Ò °ªÀ» Ã£±â À§ÇØ ¹üÀ§¸¦ ´õ Á¼ÇôÁØ´Ù
 			maxt = avgt - 1;
 		}
 	}
 
 	return answer;
-}*/
+}
