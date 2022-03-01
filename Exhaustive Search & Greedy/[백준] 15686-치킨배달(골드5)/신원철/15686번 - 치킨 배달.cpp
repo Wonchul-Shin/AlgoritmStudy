@@ -36,7 +36,6 @@ void combi(int start, int cnt) {
         return;
     }
     else {
-        // 폐업하지 않을 치킨집 고르기
         for (int i = start; i < chicken.size(); i++) {
             if (!check[i]) {
                 check[i] = true;

@@ -33,3 +33,9 @@
 
 - 1회차: [해시](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Hash)
 - 2회차: [스택 & 큐](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Stack)
+- 3회차: [힙](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Heap)
+- 4회차: [정렬](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Sort)
+- 5회차: [완탐&그리디](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Exhaustive%20Search%20%26%20Greedy)
+- 6회차: [그래프](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Graph)
+- 7회차: [동적계획법](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Dynamic%20Programming)
+- 8회차: 
