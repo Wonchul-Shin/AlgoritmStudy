@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <vector>
 
@@ -11,34 +11,34 @@ int main() {
 
 	cin >> N >> K;
 
-	vector<pair<int, int>> bag(N); //¹°°Ç
-	vector<int> dp_w[101]; // ¹«°Ô
-	vector<int> dp_v[101]; // °¡Ä¡
+	vector<pair<int, int>> bag(N); //ë¬¼ê±´
+	vector<int> dp_w[101]; // ë¬´ê²Œ
+	vector<int> dp_v[101]; // ê°€ì¹˜
 
 	for (int i = 0; i < N; i++) {
 		cin >> w >> v;
 		bag[i] = pair<int, int> (w, v);
 	}
 
-	dp_w[0].push_back(bag[0].first); // ¸Ç Ã³À½ ¹°°Ç
+	dp_w[0].push_back(bag[0].first); // ë§¨ ì²˜ìŒ ë¬¼ê±´
 	dp_v[0].push_back(bag[0].second);
 
 	for (int a = 1; a < N; a++) {
 
 		for (int i = 0; i < a ; i++) {
 
-			dp_w[a].push_back(bag[a].first + bag[i].first); // Ã¹¹øÂ° ¹°°Ç
+			dp_w[a].push_back(bag[a].first + bag[i].first); // ì²«ë²ˆì§¸ ë¬¼ê±´
 			dp_v[a].push_back(bag[a].second + bag[i].second);
 
 			for (int j = 0; j < dp_v[i].size(); j++) {
 				int x = 0;
 
-				if (bag[a].first + dp_w[i][j] <= K) { // ¹°°ÇµéÀÇ ´©Àû ¹«°Ô¸¦ °¡Áø dp¿Í Â÷·Ê´ë·Î ºñ±³
+				if (bag[a].first + dp_w[i][j] <= K) { // ë¬¼ê±´ë“¤ì˜ ëˆ„ì  ë¬´ê²Œë¥¼ ê°€ì§„ dpì™€ ì°¨ë¡€ëŒ€ë¡œ ë¹„êµ
 					dp_w[a].push_back(bag[a].first + dp_w[i][j]);
 					dp_v[a].push_back(bag[a].second + dp_v[i][j]);
 					x = bag[a].second + dp_v[i][j];
 				}
-				else { // Kº¸´Ù Å©¸é ±×³É ÀÚ½ÅÀÇ ¹«°Ô¿Í °¡Ä¡¸¸ ´ëÀÔ
+				else { // Kë³´ë‹¤ í¬ë©´ ê·¸ëƒ¥ ìì‹ ì˜ ë¬´ê²Œì™€ ê°€ì¹˜ë§Œ ëŒ€ì…
 					dp_w[a].push_back(bag[a].first);
 					dp_v[a].push_back(bag[a].second);
 					x = bag[a].second;
@@ -52,4 +52,4 @@ int main() {
 	cout << result;
 
 	return 0;
-}*/
+}
