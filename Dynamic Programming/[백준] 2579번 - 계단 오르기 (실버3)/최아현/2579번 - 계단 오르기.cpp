@@ -1,9 +1,9 @@
-/*#include<iostream>
+#include<iostream>
 #include <algorithm>
 
 using namespace std;
 
-int stair[301] = { 0, }; // °è´Ü
+int stair[301] = { 0, }; // ê³„ë‹¨
 int dp[301] = { 0, }; 
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
 		cin >> stair[i];
 	}
 	for (int i = 1; i <= N; i++) {
-		dp[i] = max(dp[i - 3] + stair[i - 1] + stair[i], dp[i - 2] + stair[i]); // ¿¬¼Ó 3Ä­ÀÌ µÇÁö ¾Ê´Â À§Ä¡ÀÇ dp·Î ºñ±³
+		dp[i] = max(dp[i - 3] + stair[i - 1] + stair[i], dp[i - 2] + stair[i]); // ì—°ì† 3ì¹¸ì´ ë˜ì§€ ì•ŠëŠ” ìœ„ì¹˜ ë¹„êµ
 	}
 	cout << dp[N];
-}*/
+}
