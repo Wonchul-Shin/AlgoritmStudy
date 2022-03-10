@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <queue>
 #include <string>
 #include <cstring>
@@ -6,10 +6,10 @@
 using namespace std;
 
 bool pri_num[10001]; 
-int visited[10001]; // ¾ÈÇØº» ºñ¹Ğ¹øÈ£ È®ÀÎ
+int visited[10001]; // ì•ˆí•´ë³¸ ë¹„ë°€ë²ˆí˜¸ í™•ì¸
 int y;
 
-void prime() { // 1000~9999 °ª Áß ¼Ò¼ö¸¸ ture
+void prime() { // 1000~9999 ê°’ ì¤‘ ì†Œìˆ˜ë§Œ ture
 	int pri = 1;
 	for (int i = 1000; i < 10000; i++) {
 		for (int j = 2; j < i; j++) {
@@ -32,15 +32,15 @@ void bfs(int num) {
 		q.pop();
 		for (int i = 0; i<4; i++) {
 
-			string node_s = to_string(node); // ¹®ÀÚ¿­·Î ÀúÀå
+			string node_s = to_string(node); // ë¬¸ìì—´ë¡œ ì €ì¥
 	
-			for (int j = 0; j < 10; j++) { // 0~10 º¯È¯ÇØ¼­ È®ÀÎ
+			for (int j = 0; j < 10; j++) { // 0~10 ë³€í™˜í•´ì„œ í™•ì¸
 		 
 				node_s[i] = j + '0';
 
 				int next = stoi(node_s); 
 
-				if (next >= 1000 && pri_num[next] == true && visited[next] == -1) { // visited È®ÀÎÇÏ¸é¼­ q¿¡ »ğÀÔ
+				if (next >= 1000 && pri_num[next] == true && visited[next] == -1) { // visited í™•ì¸í•˜ë©´ì„œ qì— ì‚½ì…
 					visited[next] = visited[node] + 1;
 					q.push(next);
 				}
@@ -59,7 +59,7 @@ int main() {
 
 	for (int t = 0; t < T; t++) {
 
-		memset(visited, -1, sizeof(visited)); // -1 ·Î ÃÊ±âÈ­
+		memset(visited, -1, sizeof(visited)); // -1 ë¡œ ì´ˆê¸°í™”
 
 		cin >> x >> y;
 		bfs(x);
@@ -73,4 +73,4 @@ int main() {
 	}
 
 	return 0;
-}*/
+}
