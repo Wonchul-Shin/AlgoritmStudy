@@ -1,11 +1,10 @@
-/*
 #include <iostream>
 #include <vector>
 #include<string.h>
 
 using namespace std;
 
-int visited[100] = { 0, }; // º¤ÅÍ ÀÎµ¦½º
+int visited[100] = { 0, }; // ë²¡í„° ì¸ë±ìŠ¤
 vector<pair<int, int>> store;
 int feel = 0; // 0 = sad 1 = happy
 int x, y;
@@ -42,23 +41,23 @@ int main() {
 	int T, N;
 	int homex, homey;
 
-	cin >> T; // Å×½ºÆ® ÄÉÀÌ½º
+	cin >> T; // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤
 
 	for (int t = 0; t < T; t++) {
 		store.clear();
 		memset(visited, 0, sizeof(visited));
 
 		feel = 0;
-		cin >> N; // ÆíÀÇÁ¡ °¹¼ö
+		cin >> N; // í¸ì˜ì  ê°¯ìˆ˜
 
-		cin >> homex >> homey; // Áı À§Ä¡
+		cin >> homex >> homey; // ì§‘ ìœ„ì¹˜
 
 		for (int i = 0; i < N; i++) {
 			cin >> x >> y;
 			store.push_back(make_pair(x,y));
 		}
 
-		cin >> x >> y; // Æä½ºÆ¼¹ú À§Ä¡
+		cin >> x >> y; // í˜ìŠ¤í‹°ë²Œ ìœ„ì¹˜
 		
 		//sort(store.begin(), store.end(), cmp);
 		bfs(homex, homey);
@@ -68,4 +67,4 @@ int main() {
 		else cout << "sad\n";
 	}
 	return 0;
-}*/
+}
