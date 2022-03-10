@@ -1,12 +1,12 @@
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <queue>
 #include<string.h>
 
 using namespace std;
 
-bool visited[1001]; // È®ÀÎµÈ À§Ä¡´Â True·Î º¯°æ
-int graph[1001][1001]; // ³ëµå
+bool visited[1001]; // í™•ì¸ëœ ìœ„ì¹˜ëŠ” Trueë¡œ ë³€ê²½
+int graph[1001][1001]; // ë…¸ë“œ
 int N, M;
 
 void Dfs(int v) {
@@ -57,4 +57,4 @@ int main() {
 	Bfs(V);
 
 	return 0;
-}*/
+}
