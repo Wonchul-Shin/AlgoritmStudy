@@ -38,4 +38,4 @@
 - 5회차: [완탐&그리디](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Exhaustive%20Search%20%26%20Greedy)
 - 6회차: [그래프](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Graph)
 - 7회차: [동적계획법](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/Dynamic%20Programming)
-- 8회차: 
+- 8회차: [BFS&DFS](https://github.com/Wonchul-Shin/AlgoritmStudy/tree/main/DFS%20%26%20BFS)
