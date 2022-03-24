@@ -3,7 +3,7 @@
 ## 🙋‍♂️ 참가인원 🙋‍♀️
 - [용제](https://github.com/YongJ7)
 - [이은성](https://github.com/Ganbilly)
-- [hyeon](https://github.com/ahyc01)
+- [최아현](https://github.com/ahyc01)
 - [신원철](https://github.com/Wonchul-Shin)
 
 ## 목표💡
